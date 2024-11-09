@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="Suíte Super Luxo" 
+               HorizontalTextAlignment="Center"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="{StaticResource Primary}"
+               FontFamily="Montserrat"
+               />
+
+        <Frame Margin="10" Padding="12">
+            
+            <HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label 
+                        Text="Adultos:" 
+                        Margin="2"
+                        FontAttributes="Bold"
+                        />
+                    <Label Text="2" TextColor="{StaticResource Primary}" Margin="2"/>
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+                    <Label 
+                        Text="Crianças:" 
+                        Margin="2"
+                        FontAttributes="Bold"
+                    />
+                    <Label Text="2" TextColor="{StaticResource Primary}" Margin="2"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            
+        </Frame>
+
+        <Frame Margin="10" Padding="10">
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="01/11/2024"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="10/11/2024"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="10 dias"/>
+
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10" Padding="10">
+            <HorizontalStackLayout>
+                <Label Text="Valor Total:" FontAttributes="Bold" Margin="2" />
+                <Label Text="R$3600,00" Margin="2" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" 
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+
+
+    </VerticalStackLayout>
+    
+</ContentPage>

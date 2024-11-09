@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout
+        VerticalOptions="StartAndExpand"
+        Padding="10"
+        Spacing="8">
+
+        <Label Text="Sobre" 
+               HorizontalOptions="CenterAndExpand"
+               FontFamily="Montserrat"
+               FontAttributes="Bold"
+               FontSize="48"
+               Margin="00, 30, 0, 20"/>
+
+        <Frame BackgroundColor="{StaticResource Gray950}" Padding="12">
+            <HorizontalStackLayout>
+                <Label Text="Desenvolvedor:" FontAttributes="Bold" Margin="2"/>
+                <Label Text="Gabriel B. Di Rezze" Margin="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="{StaticResource Gray950}" Padding="12">
+            <HorizontalStackLayout>
+                <Label Text="Ano de desenvolvimento:" FontAttributes="Bold" Margin="2"/>
+                <Label Text="2024" Margin="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="{StaticResource Gray950}" Padding="12">
+            <HorizontalStackLayout>
+                <Label Text="Tecnologias utilizadas:" FontAttributes="Bold" Margin="2"/>
+                <Label Text=".Net, MAUI, C# e XAML" Margin="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="{StaticResource Gray950}" Padding="12">
+            <HorizontalStackLayout>
+                <Label Text="Desenvolvedor:" FontAttributes="Bold" Margin="2"/>
+                <Label Text="Gabriel B. Di Rezze" Margin="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="Transparent" 
+               BorderColor="Transparent" 
+               Padding="12"
+               
+               >
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Versão:" FontAttributes="Bold" Margin="2"/>
+                <Label Text="0.1" Margin="2"/>
+            </HorizontalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <VerticalStackLayout 
+        VerticalOptions="CenterAndExpand"
+        Padding="10"
+        >
+        
+        <Label 
+            Text="Cálculo da Diária"
+            FontFamily="Montserrat"
+            FontSize="32"
+            Margin="0,20,0,10"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            />
+
+        <Frame Padding="10">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      RowSpacing="8"
+                      ColumnDefinitions="*, *, 2*"
+                      Margin="10"
+                      >
+
+                    <Label Grid.Row="0" 
+                       Grid.Column="0"
+                       Text="Adultos: "
+                       FontFamily="Montserrat"
+                       />
+
+                    <Label Grid.Row="0" 
+                       Grid.Column="1"
+                       TextColor="{StaticResource Primary}"
+                       Text="{Binding Value}"
+                       BindingContext="{x:Reference stp_adultos}"
+                       />
+
+                    <Stepper Grid.Row="0" Grid.Column="2" 
+                         x:Name="stp_adultos"
+                         Maximum="10"
+                         Minimum="0"
+                         HorizontalOptions="End"/>
+
+                    <Label Grid.Row="1" 
+                       Grid.Column="0"
+                       Text="Crianças: "
+                       FontFamily="Montserrat"
+                       />
+
+                    <Label Grid.Row="1" 
+                       Grid.Column="1"
+                       TextColor="{StaticResource Primary}"
+                       Text="{Binding Value}"
+                       BindingContext="{x:Reference stp_criancas}"
+                       />
+
+                    <Stepper Grid.Row="1" Grid.Column="2" 
+                         x:Name="stp_criancas"
+                         Maximum="10"
+                         Minimum="0"
+                         HorizontalOptions="End"/>
+
+                </Grid>
+
+                <Label Text="Escolha sua suíte:" FontFamily="Montserrat"/>
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione uma acomodação"
+                        FontFamily="Montserrat"
+                        />
+
+                <Frame Margin="8" Padding="10" BackgroundColor="{StaticResource Gray950}">
+                    <VerticalStackLayout>
+
+                        <Label Text="Período de Estadia" FontFamily="Montserrat" />
+                        
+                        <HorizontalStackLayout Padding="4">
+                            <Label Text="Check-in: " 
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="0, 0, 10, 0"
+                                   FontFamily="Montserrat"/>
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy" 
+                                        HorizontalOptions="End"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="4">
+                            <Label Text="Check-out: " 
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="0, 0, 10, 0"
+                                   FontFamily="Montserrat"
+                                   />
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"
+                                        HorizontalOptions="End"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Button Text="Avançar" Clicked="Button_Clicked" Margin="12" />
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <HorizontalStackLayout Margin="10"
+                               HorizontalOptions="CenterAndExpand">
+            <Button Clicked="Button_Clicked_1" 
+                    Text="Sobre"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource Gray100}"
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Padding="10"
+                    />
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>
