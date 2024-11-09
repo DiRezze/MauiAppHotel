@@ -37,12 +37,6 @@
             </HorizontalStackLayout>
         </Frame>
 
-        <Frame BackgroundColor="{StaticResource Gray950}" Padding="12">
-            <HorizontalStackLayout>
-                <Label Text="Desenvolvedor:" FontAttributes="Bold" Margin="2"/>
-                <Label Text="Gabriel B. Di Rezze" Margin="2"/>
-            </HorizontalStackLayout>
-        </Frame>
 
         <Frame BackgroundColor="Transparent" 
                BorderColor="Transparent" 

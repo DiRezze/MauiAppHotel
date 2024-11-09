@@ -30,4 +30,5 @@ public partial class ContratacaoHospedagem : ContentPage
             DisplayAlert("Ops", ex.Message, "Ok");
         }
     }
+
 }

@@ -103,7 +103,7 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" Clicked="Button_Clicked" Margin="12" />
+                <Button Text="Avançar" Clicked="Button_Clicked" Margin="12"/>
 
             </VerticalStackLayout>
 
