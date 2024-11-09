@@ -2,9 +2,15 @@ namespace MauiAppHotel.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
 {
+    App PropriedadeApp;
+
 	public ContratacaoHospedagem()
 	{
 		InitializeComponent();
+
+        PropriedadeApp = (App)Application.Current;
+
+        pck_quarto.ItemsSource = PropriedadeApp.lista_quartos;
 	}
 
     private void Button_Clicked(object sender, EventArgs e)

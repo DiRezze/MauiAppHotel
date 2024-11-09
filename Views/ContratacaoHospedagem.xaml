@@ -72,6 +72,7 @@
                 <Picker x:Name="pck_quarto"
                         Title="Selecione uma acomodação"
                         FontFamily="Montserrat"
+                        ItemDisplayBinding="{Binding descricao}"
                         />
 
                 <Frame Margin="8" Padding="10" BackgroundColor="{StaticResource Gray950}">
